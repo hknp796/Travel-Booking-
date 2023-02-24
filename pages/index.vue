@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <Why />
 </template>
 
-<script setup></script>
+<script setup>
+import Why from "../components/static/Why.vue";
+</script>
