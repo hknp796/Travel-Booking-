@@ -1,5 +1,9 @@
 <template>
-  <div></div>
+  <Why />
+  <Footer />
 </template>
 
-<script setup></script>
+<script setup>
+// import Why from "../components/static/Why.vue";
+import Footer from "../components/static/Footer.vue";
+</script>
