@@ -1,6 +1,8 @@
 <template>
-  <main>
+  <main class="w-full">
+    <CoreNavbar />
     <slot />
+    <CoreFooter />
   </main>
 </template>
 

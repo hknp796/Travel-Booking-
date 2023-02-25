@@ -1,5 +1,5 @@
 <template>
-  <StaticNav />
+  <div></div>
 </template>
 
 <script setup></script>

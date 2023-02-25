@@ -12,12 +12,8 @@
 }
 
 @layer components {
-
   /* containers */
-  .per-90-container{
+  .per-90-container {
     @apply w-[90%] mx-auto;
   }
-
-
-
 }
