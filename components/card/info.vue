@@ -1,18 +1,26 @@
 <template>
-  <div class="max-w-[500px]">
-    <img src="/png/Flight.png" alt="" class="h-full w-full rounded-lg mb-3" />
+  <div class="p-3 min-w-[230px]">
+    <img :src="image" :alt="alt" class="rounded-lg mb-3 w-full" />
 
-    <span class="text-gray-300 text-[12px]">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, voluptas.
-    </span>
+    <p class="text-gray-300 text-[12px]">
+      {{ content }}
+    </p>
 
-    <div class="flex items-center justify-between mt-3">
-      <h3 class="font-bold text-[20px]">From AED 55 Per Adults</h3>
-      <BaseBadge which="yellow" :rating="4.5" />
+    <div class="w-full mt-auto flex items-center justify-between">
+      <h3 class="font-bold text-[15px]">{{ title }}</h3>
+      <BaseBadge which="yellow" :rating="rating" />
     </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const props = defineProps({
+  title: String,
+  content: String,
+  rating: Number,
+  image: String,
+  alt: String,
+});
+</script>
 
 <style lang="scss" scoped></style>
