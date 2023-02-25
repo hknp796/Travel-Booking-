@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    <FlightLocationInfo />
+  </div>
 </template>
 
 <script setup></script>
