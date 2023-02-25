@@ -8,6 +8,7 @@
     <!--  -->
 
     <!-- Top destination -->
+    <SectionsDestinations />
     <!--  -->
 
     <!-- Popular experience -->
