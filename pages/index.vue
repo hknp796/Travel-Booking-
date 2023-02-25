@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <CardInfo />
-  </div>
+  <div></div>
 </template>
 
 <script setup></script>
