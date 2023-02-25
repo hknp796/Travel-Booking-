@@ -23,4 +23,9 @@ module.exports = {
     },
   },
   plugins: [require("flowbite"), require("daisyui")],
+
+  // Daisy UI config
+  daisyui: {
+    themes: [],
+  },
 };
