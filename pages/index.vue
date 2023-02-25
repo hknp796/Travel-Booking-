@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex flex-col justify-between">
     <!-- Booking section -->
     <SectionsSearch />
     <!--  -->
@@ -12,6 +12,7 @@
     <!--  -->
 
     <!-- Popular experience -->
+    <SectionsExperience />
     <!--  -->
 
     <!-- Top Categories -->
