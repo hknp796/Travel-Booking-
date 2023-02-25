@@ -1,5 +1,7 @@
 <template>
-  <div>Hello</div>
+  <div>
+    <BaseTitleBack title="Top Destinations" />
+  </div>
 </template>
 
 <script setup>
