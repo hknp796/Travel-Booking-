@@ -16,6 +16,7 @@
     <!--  -->
 
     <!-- Top Categories -->
+    <SectionsCategories />
     <!--  -->
 
     <!-- Why klahsra -->
