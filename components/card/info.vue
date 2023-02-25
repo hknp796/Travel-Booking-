@@ -8,7 +8,7 @@
 
     <div class="flex items-center justify-between mt-3">
       <h3 class="font-bold text-[20px]">From AED 55 Per Adults</h3>
-      <Badge which="yellow" :rating="4.5" />
+      <BaseBadge which="yellow" :rating="4.5" />
     </div>
   </div>
 </template>
