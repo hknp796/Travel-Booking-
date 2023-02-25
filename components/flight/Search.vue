@@ -69,23 +69,73 @@
     <!-- Departure -->
     <div class="flex items-center justify-between">
       <div class="flex flex-col items-start">
-        <label>Departure</label>
+        <label class="text-gray-400">Departure</label>
         <h3 ref="depDate" class="cursor-pointer" @click="showDatePicker">
           {{ testDate }}
         </h3>
       </div>
 
       <div class="flex flex-col items-end">
-        <label>To</label>
+        <label class="text-gray-400"> Return </label>
         <h3 ref="depTo" class="cursor-pointer">{{ testDate }}</h3>
       </div>
     </div>
+    <div class="divider"></div>
+    <div>
+      <button
+        id="dropdownDelayButton"
+        data-dropdown-toggle="dropdownDelay"
+        data-dropdown-delay="500"
+        data-dropdown-trigger="hover"
+        class="text-gray-500 bg-transparent font-medium rounded-lg text-sm text-center inline-flex items-center"
+        type="button"
+      >
+        Travellers & class
+        <svg
+          class="w-4 h-4 ml-2"
+          aria-hidden="true"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"
+          ></path>
+        </svg>
+      </button>
+      <!-- Dropdown menu -->
+      <div
+        id="dropdownDelay"
+        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+      >
+        <ul
+          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+          aria-labelledby="dropdownDelayButton"
+        >
+          <li>
+            <a
+              href="#"
+              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+              >Sign out</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p><span>1 Adult,</span>Economy</p>
 
+    <button class="btn btn-accent mt-10 text-white">Search flights</button>
     <!--  -->
   </div>
 </template>
 
 <script setup>
+import { initDropdowns } from "flowbite";
+
 const testDate = ref("Sat, 28 Jun");
 
 const form = ref({
