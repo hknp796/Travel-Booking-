@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gray-500 h-96">
+  <div class="bg-[url('/png/Flight.png')] bg-no-repeat bg-contain h-96">
     <div class="flex justify-end">
       <CoreDropdown
         v-for="(item, index) in itemsForNav"
@@ -7,6 +7,8 @@
         :items="item.name"
       />
     </div>
+
+    <img src="/svg/logo.svg" alt="Klashra icon" />
   </div>
 </template>
 
