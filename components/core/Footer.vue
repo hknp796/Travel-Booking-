@@ -4,28 +4,24 @@
       <img src="/svg/logo.svg" alt="" />
 
       <ul class="flex gap-3 font-thin">
-        <li><NuxtLink>FAQ </NuxtLink></li>
-        <li><NuxtLink>Support </NuxtLink></li>
-        <li><NuxtLink>Contact </NuxtLink></li>
+        <li v-for="link in footer.pageLinks" :key="link.id">
+          <NuxtLink :to="link.to">{{ link.page }}</NuxtLink>
+        </li>
       </ul>
 
       <div class="w-full flex justify-between gap-4">
-        <NuxtLink> <Icon name="jam:facebook-circle" size="30" /></NuxtLink>
-        <NuxtLink>
-          <Icon name="jam:instagram" size="30" />
-        </NuxtLink>
-        <NuxtLink>
-          <Icon name="jam:linkedin" size="30" />
-        </NuxtLink>
-        <NuxtLink>
-          <Icon name="jam:twitter" size="30" />
-        </NuxtLink>
-        <NuxtLink>
-          <Icon name="jam:youtube" size="30" />
+        <NuxtLink
+          v-for="social in footer.socialLinks"
+          :key="social.id"
+          :to="social.to"
+        >
+          <Icon :name="social.icon" size="30" />
         </NuxtLink>
       </div>
     </div>
   </div>
 </template>
 
-<script></script>
+<script setup>
+const footer = useFooter();
+</script>
