@@ -19,6 +19,6 @@
 
   /* mobile container */
   .mobile-container {
-    @apply max-w-md mx-auto;
+    @apply max-w-lg mx-auto;
   }
 }
