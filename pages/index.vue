@@ -1,9 +1,5 @@
 <template>
-  <Why />
-  <Footer />
+  <StaticNav />
 </template>
 
-<script setup>
-// import Why from "../components/static/Why.vue";
-import Footer from "../components/static/Footer.vue";
-</script>
+<script setup></script>
