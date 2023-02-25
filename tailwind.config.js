@@ -26,6 +26,6 @@ module.exports = {
 
   // Daisy UI config
   daisyui: {
-    themes: [],
+    themes: ["light"],
   },
 };
