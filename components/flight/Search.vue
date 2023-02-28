@@ -82,7 +82,7 @@
     </div>
     <div class="divider"></div>
     <div>
-      <CorePopover />
+      <CoreModal />
 
       <!-- Dropdown menu -->
       <div
