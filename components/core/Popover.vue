@@ -17,7 +17,9 @@
         <PopoverPanel
           class="absolute left-1/2 z-10 mt-3 w-full -translate-x-1/2 transform px-4"
         >
-          <div class="rounded-2xl ring-opacity-5 bg-white p-4 shadow-2xl">
+          <div
+            class="rounded-2xl ring-opacity-5 bg-white p-4 shadow-2xl h-screen"
+          >
             <div class="flex justify-between items-center mx-5 mb-5">
               <div>
                 <h1 class="font-bold">Adults</h1>
