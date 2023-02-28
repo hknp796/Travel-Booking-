@@ -1,7 +1,7 @@
 <template>
   <div class="">
+    <CoreTabs />
     <!-- Booking section -->
-    <SectionsSearch />
     <!--  -->
 
     <!-- Best deals on flights -->

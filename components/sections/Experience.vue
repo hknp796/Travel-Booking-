@@ -1,6 +1,6 @@
 <template>
   <div class="p-4">
-    <BaseRedirectTitle title="Popular Experience" to="/top-destination" />
+    <BaseRedirectTitle title="Popular Experience" to="/popular-experience" />
     <div class="flex overflow-x-scroll mt-4 gap-5">
       <CardInfo v-bind="test" />
       <CardInfo v-bind="test2" />
