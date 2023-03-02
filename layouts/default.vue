@@ -1,8 +1,6 @@
 <template>
   <!-- mobile container needs to be removed -->
-  <main
-    class="w-full mobile-container min-h-screen flex flex-col justify-between"
-  >
+  <main class="flex flex-col justify-between lg:w-[1350px] lg:mx-auto">
     <CoreNavbar />
     <slot />
 
