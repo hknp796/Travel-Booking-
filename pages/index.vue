@@ -1,9 +1,9 @@
 <template>
   <div class="">
-    <CoreTabs />
+    <CoreTabs class="lg:hidden" />
     <!-- Booking section -->
     <!--  -->
-
+    <FlightWebSearch class="hidden lg:block" />
     <!-- Best deals on flights -->
     <!--  -->
 
