@@ -19,7 +19,6 @@
 <script setup>
 import { ref } from "vue";
 const itemsForNav = ref([
-  { name: "LOG IN ", items: "" },
   { name: "MENU", items: "" },
   { name: "AED", items: "" },
 ]);
