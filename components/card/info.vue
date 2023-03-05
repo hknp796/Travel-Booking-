@@ -1,5 +1,5 @@
 <template>
-  <div class="p-3 min-w-[230px] flex flex-col">
+  <div class="min-w-[230px] flex flex-col">
     <img :src="image" :alt="alt" class="rounded-lg mb-3 w-full" />
 
     <p class="text-gray-300 text-[12px] break-words">
