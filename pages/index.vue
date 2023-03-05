@@ -8,15 +8,15 @@
     <!--  -->
 
     <!-- Top destination -->
-    <SectionsDestinations />
+    <SectionsDestinations class="lg:mt-60" />
     <!--  -->
 
     <!-- Popular experience -->
-    <SectionsExperience />
+    <SectionsExperience class="lg:mt-60" />
     <!--  -->
 
     <!-- Top Categories -->
-    <SectionsCategories />
+    <SectionsCategories class="lg:mt-60" />
     <!--  -->
 
     <!-- Why klahsra -->
