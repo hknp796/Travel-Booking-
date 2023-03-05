@@ -1,11 +1,14 @@
 <template>
   <div class="p-4">
     <BaseRedirectTitle title="Popular Experience" to="/popular-experience" />
-    <div class="flex overflow-x-scroll mt-4 gap-5">
-      <CardInfo v-bind="test" />
-      <CardInfo v-bind="test2" />
-      <CardInfo v-bind="test" />
-      <CardInfo v-bind="test" />
+    <div class="flex overflow-x-scroll mt-4 gap-5 lg:w-full">
+      <CardInfo
+        v-bind="test"
+        class="lg:min-w-[430px] lg:min-h-[325px]"
+        v-for="(item, index) in 6"
+        :key="index"
+      />
+      <CardInfo v-bind="test2" class="lg:min-w-[430px] lg:min-h-[325px]" />
     </div>
   </div>
 </template>
