@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative bg-[url('/png/Flight.png')] bg-no-repeat bg-cover h-[500px]"
+    class="relative bg-[url('/png/flight.jpg')] bg-no-repeat bg-cover h-[500px]"
   >
     <div class="flex justify-end">
       <CoreDropdown

@@ -1,5 +1,5 @@
 <template>
-  <div class="relative">
+  <div class="relative cursor-pointer">
     <img :src="image" :alt="alt" class="rounded-lg" />
     <div
       class="absolute inset-0 bg-gradient-to-r to-transparent from-gray-900 rounded-lg"

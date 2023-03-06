@@ -1,7 +1,7 @@
 <template>
-  <div class="w-[700px] p-2 sm:px-0 bg-white rounded-xl shadow-lg -mb-5">
+  <div class="max-w-max p-2 sm:px-0 bg-white rounded-xl shadow-lg -mb-5">
     <TabGroup>
-      <TabList class="flex mx-auto">
+      <TabList class="flex mx-auto gap-12 px-5 py-2">
         <Tab
           v-for="category in Object.values(categories)"
           as="template"
@@ -25,7 +25,7 @@
       </TabList>
 
       <TabPanels class="mt-2">
-        <TabPanel> </TabPanel>
+        <TabPanel></TabPanel>
       </TabPanels>
     </TabGroup>
   </div>
