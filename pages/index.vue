@@ -1,9 +1,12 @@
 <template>
-  <div class="">
+  <div class="lg:w-[1350px] lg:mx-auto">
     <CoreTabs class="lg:hidden" />
     <!-- Booking section -->
     <!--  -->
-    <FlightWebSearch class="hidden lg:block" />
+    <div class="-mt-[250px] z-20 absolute">
+      <CoreSearchCatogories class="hidden lg:block mx-auto relative" />
+      <FlightWebSearch class="hidden lg:block lg:w-[1350px]" />
+    </div>
     <!-- Best deals on flights -->
     <!--  -->
 

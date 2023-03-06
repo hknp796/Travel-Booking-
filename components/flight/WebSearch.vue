@@ -1,6 +1,6 @@
 <template>
-  <div class="border p-7 shadow-2xl rounded-2xl">
-    <div class="flex gap-7">
+  <div class="border p-7 shadow-2xl rounded-2xl bg-white">
+    <div class="flex gap-7 mt-3">
       <div class="flex gap-2">
         <input
           type="radio"
@@ -86,7 +86,7 @@
           <!--  -->
         </div>
         <div
-          class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-[#70C3D4] shadow rounded-[50%] p-2 z-20"
+          class="absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2 bg-[#70C3D4] shadow rounded-[50%] z-20 px-2 py-[6px]"
         >
           <button @click="switchDestination">
             <Icon name="ph:arrows-left-right-thin" size="20" />
