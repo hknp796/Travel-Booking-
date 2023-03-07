@@ -9,7 +9,7 @@
         </li>
       </ul>
 
-      <div class="w-full flex justify-between gap-4">
+      <div class="w-1/2 flex justify-between gap-4">
         <NuxtLink
           v-for="social in footer.socialLinks"
           :key="social.id"
