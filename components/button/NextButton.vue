@@ -1,5 +1,5 @@
 <template>
-  <div class="hidden lg:flex justify-center mt-16">
+  <div class="hidden lg:flex justify-center mt-10">
     <div>
       <button
         type="button"

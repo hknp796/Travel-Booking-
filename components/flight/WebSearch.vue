@@ -1,6 +1,6 @@
 <template>
-  <div class="border p-7 shadow-2xl rounded-2xl bg-white">
-    <div class="flex gap-7 mt-3">
+  <div class="border p-7 shadow-2xl rounded-2xl bg-white flex flex-col gap-6">
+    <div class="flex gap-7">
       <div class="flex gap-2">
         <input
           type="radio"
@@ -34,7 +34,7 @@
     </div>
 
     <div
-      class="flex justify-between items-center cursor-pointer border border-gray-300 rounded-xl mt-10"
+      class="flex justify-between items-center cursor-pointer border border-gray-300 rounded-xl"
     >
       <!-- From -->
       <div class="border-r border-gray-300 relative">
@@ -161,10 +161,10 @@
         <p>Economy,Premium</p>
       </div>
     </div>
-    <div class="flex justify-center mt-10">
+    <div class="flex justify-center">
       <button
         type="button"
-        class="text-gray-900 bg-white border border-gray-300 font-medium rounded-lg text-sm px-9 py-3 w-36 mt-4 hover:bg-slate-100"
+        class="text-gray-900 bg-white border border-gray-300 font-medium rounded-lg text-sm px-9 py-3 w-36 hover:bg-slate-100"
       >
         Search
       </button>

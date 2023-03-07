@@ -4,23 +4,23 @@
     <!-- Booking section -->
     <!--  -->
     <div class="-mt-[250px] z-20 absolute">
-      <CoreSearchCatogories class="hidden lg:block mx-auto relative" />
-      <FlightWebSearch class="hidden lg:block lg:w-[1350px]" />
+      <CoreSearchCatogories class="hidden lg:flex mx-auto relative" />
+      <FlightWebSearch class="hidden lg:flex lg:w-[1350px]" />
     </div>
     <!-- Best deals on flights -->
     <!--  -->
 
     <!-- Top destination -->
-    <SectionsDestinations class="lg:mt-60" />
+    <SectionsDestinations class="lg:mt-52" />
     <!--  -->
-    <ButtonNextButton class="" />
+    <ButtonNextButton />
 
     <!-- Popular experience -->
-    <SectionsExperience class="lg:mt-28" />
+    <SectionsExperience />
     <!--  -->
 
     <!-- Top Categories -->
-    <SectionsCategories class="lg:mt-40" />
+    <SectionsCategories />
     <!--  -->
 
     <!-- Why klahsra -->
