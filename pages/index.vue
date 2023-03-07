@@ -43,4 +43,6 @@ const {
   },
   method: "get",
 });
+
+console.log(response);
 </script>
