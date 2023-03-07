@@ -29,4 +29,18 @@
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const config = useRuntimeConfig();
+
+const {
+  data: response,
+  error,
+  refresh,
+  pending,
+} = await useLazyFetch("http://sandbox.raynatours.com/api/Tour/countries", {
+  headers: {
+    Authorization: `Bearer ${config.apiSecret}`,
+  },
+  method: "get",
+});
+</script>

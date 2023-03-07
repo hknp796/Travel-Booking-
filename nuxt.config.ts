@@ -6,23 +6,23 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: "",
-      apiSecret: "",
+      apiSecret: process.env.NUXT_API_SECRET,
     },
   },
 
-  proxy: {
-    enableProxy: true,
-    proxies: {
-      "/api": {
-        target: "http://sandbox.raynatours.com/api",
-        changeOrigin: true,
-        rewrite: (path: string) => {
-          return path.replace(/^\/api/, "");
-        },
-      },
-    },
-    fetch: true,
-  },
+  // proxy: {
+  //   enableProxy: true,
+  //   proxies: {
+  //     "/api": {
+  //       target: "http://sandbox.raynatours.com/api",
+  //       changeOrigin: true,
+  //       rewrite: (path: string) => {
+  //         return path.replace(/^\/api/, "");
+  //       },
+  //     },
+  //   },
+  //   fetch: true,
+  // },
 
   postcss: {
     plugins: {
