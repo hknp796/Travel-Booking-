@@ -29,7 +29,9 @@
 
         <TabPanels>
           <TabPanel>
-            <FlightWebSearch class="hidden lg:flex lg:w-[1350px]" />
+            <LayoutSearch>
+              <FlightWebSearch />
+            </LayoutSearch>
           </TabPanel>
         </TabPanels>
       </div>
@@ -39,6 +41,7 @@
 <script setup>
 import { ref } from "vue";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
+
 
 const categories = ref([
   {

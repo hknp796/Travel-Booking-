@@ -1,5 +1,5 @@
 <template>
-  <div class="border p-7 shadow-2xl rounded-2xl bg-white flex flex-col gap-6">
+  <div class="w-full flex flex-col gap-6">
     <div class="flex gap-7">
       <div class="flex gap-2">
         <input
@@ -174,6 +174,7 @@
 
 <script setup>
 import { ref } from "vue";
+
 const form = ref({
   flightType: "oneway",
 });
