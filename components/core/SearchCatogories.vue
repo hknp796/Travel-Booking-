@@ -1,32 +1,38 @@
 <template>
-  <div class="max-w-max p-2 sm:px-0 bg-white rounded-xl shadow-lg -mb-5">
+  <div class="max-w-max p-2 sm:px-0 bg-white -mb-5">
     <TabGroup>
-      <TabList class="flex mx-auto gap-12 px-5 py-2">
-        <Tab
-          v-for="category in Object.values(categories)"
-          as="template"
-          :key="category"
-          v-slot="{ selected }"
+      <div class="relative">
+        <TabList
+          class="flex gap-12 px-5 py-2 absolute left-1/2 transform -translate-x-1/2 rounded-xl shadow-lg bg-white"
         >
-          <button
-            :class="[
-              'w-full   text-sm font-medium ',
-              selected
-                ? 'bg-white  text-[#70C3D4] border-b-2 border-[#70C3D4]  focus:bg-white focus:outline-none border-none'
-                : 'text-black hover:bg-white/[0.12] ',
-            ]"
+          <Tab
+            v-for="category in Object.values(categories)"
+            as="template"
+            :key="category"
+            v-slot="{ selected }"
           >
-            <Icon :name="category.icon" width="40" height="40" />
-            <p>
-              {{ category.name }}
-            </p>
-          </button>
-        </Tab>
-      </TabList>
+            <button
+              :class="[
+                'w-full   text-sm font-medium ',
+                selected
+                  ? 'bg-white  text-[#70C3D4] border-b-2 border-[#70C3D4]  focus:bg-white focus:outline-none border-none'
+                  : 'text-black hover:bg-white/[0.12] ',
+              ]"
+            >
+              <Icon :name="category.icon" width="40" height="40" />
+              <p>
+                {{ category.name }}
+              </p>
+            </button>
+          </Tab>
+        </TabList>
 
-      <TabPanels class="mt-2">
-        <TabPanel></TabPanel>
-      </TabPanels>
+        <TabPanels>
+          <TabPanel>
+            <FlightWebSearch class="hidden lg:flex lg:w-[1350px]" />
+          </TabPanel>
+        </TabPanels>
+      </div>
     </TabGroup>
   </div>
 </template>

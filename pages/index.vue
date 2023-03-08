@@ -3,10 +3,9 @@
     <CoreTabs class="lg:hidden" />
     <!-- Booking section -->
     <!--  -->
-    <div class="-mt-[250px] z-20 absolute">
-      <CoreSearchCatogories class="hidden lg:flex mx-auto relative" />
-      <FlightWebSearch class="hidden lg:flex lg:w-[1350px]" />
-    </div>
+
+    <CoreSearchCatogories class="hidden lg:flex mx-auto" />
+
     <!-- Best deals on flights -->
     <!--  -->
 
@@ -30,19 +29,19 @@
 </template>
 
 <script setup>
-const config = useRuntimeConfig();
+// const config = useRuntimeConfig();
 
-const {
-  data: response,
-  error,
-  refresh,
-  pending,
-} = await useLazyFetch("http://sandbox.raynatours.com/api/Tour/countries", {
-  headers: {
-    Authorization: `Bearer ${config.apiSecret}`,
-  },
-  method: "get",
-});
+// const {
+//   data: response,
+//   error,
+//   refresh,
+//   pending,
+// } = await useLazyFetch("http://sandbox.raynatours.com/api/Tour/countries", {
+//   headers: {
+//     Authorization: `Bearer ${config.apiSecret}`,
+//   },
+//   method: "get",
+// });
 
-console.log(response);
+// console.log(response);
 </script>
