@@ -1,6 +1,6 @@
 <template>
   <div
-    class="border p-7 shadow-2xl rounded-2xl bg-white hidden lg:flex lg:w-[1350px]"
+    class="border p-7 shadow-2xl rounded-2xl bg-white hidden lg:flex h-[290px]"
   >
     <slot> </slot>
   </div>

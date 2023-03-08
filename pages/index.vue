@@ -1,10 +1,8 @@
 <template>
-  <div class="lg:w-[1350px] lg:mx-auto">
+  <div class=" ">
     <CoreTabs class="lg:hidden" />
 
-    <CoreSearchCatogories class="hidden lg:flex mx-auto" />
-
-    <SectionsDestinations />
+    <SectionsDestinations class="mt-40" />
 
     <ButtonNextButton />
 
