@@ -1,30 +1,18 @@
 <template>
-  <div class="lg:w-[1350px] lg:mx-auto">
+  <div class="lg:w-[1350px] lg:mx-auto ">
     <CoreTabs class="lg:hidden" />
-    <!-- Booking section -->
-    <!--  -->
 
-    <CoreSearchCatogories class="hidden lg:flex mx-auto" />
+    <CoreSearchCatogories class="hidden lg:flex mx-auto " />
 
-    <!-- Best deals on flights -->
-    <!--  -->
-
-    <!-- Top destination -->
     <SectionsDestinations class="lg:mt-52" />
-    <!--  -->
+
     <ButtonNextButton />
 
-    <!-- Popular experience -->
     <SectionsExperience />
-    <!--  -->
 
-    <!-- Top Categories -->
     <SectionsCategories />
-    <!--  -->
 
-    <!-- Why klahsra -->
     <StaticWhy />
-    <!--  -->
   </div>
 </template>
 
