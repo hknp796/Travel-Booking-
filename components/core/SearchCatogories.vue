@@ -1,9 +1,9 @@
 <template>
-  <div class="max-w-max p-2 sm:px-0 bg-white -mb-5">
+  <div class="p-2 sm:px-0 w-[85%]">
     <TabGroup>
-      <div class="relative">
+      <div class="relative w-full">
         <TabList
-          class="flex gap-12 px-5 py-2 absolute left-1/2 transform -translate-x-1/2 rounded-xl shadow-lg bg-white"
+          class="flex gap-12 px-5 py-2 absolute left-1/2 transform -translate-x-1/2 -translate-y-9 rounded-xl shadow-lg bg-white"
         >
           <Tab
             v-for="category in Object.values(categories)"
@@ -30,8 +30,16 @@
         <TabPanels>
           <TabPanel>
             <LayoutSearch>
+              <CoreSearchBox />
+            </LayoutSearch>
+          </TabPanel>
+          <TabPanel>
+            <LayoutSearch>
               <FlightWebSearch />
             </LayoutSearch>
+          </TabPanel>
+          <TabPanel v-for="(item, index) in 5" :key="index">
+            <LayoutSearch><CoreComingsoon /> </LayoutSearch>
           </TabPanel>
         </TabPanels>
       </div>
@@ -42,8 +50,11 @@
 import { ref } from "vue";
 import { TabGroup, TabList, Tab, TabPanels, TabPanel } from "@headlessui/vue";
 
-
 const categories = ref([
+  {
+    name: "Search",
+    icon: "material-symbols:search-sharp",
+  },
   {
     name: "Flight",
     icon: "material-symbols:flight",

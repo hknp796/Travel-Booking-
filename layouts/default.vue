@@ -4,7 +4,7 @@
     <CoreNavbar />
     <slot />
 
-    <CoreFooter class="lg:w-[1350px] lg:mx-auto" />
+    <CoreFooter class="" />
   </main>
 </template>
 
