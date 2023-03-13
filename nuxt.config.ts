@@ -1,28 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["nuxt-icon", "@pinia/nuxt", "nuxt-headlessui", "@nuxt-alt/proxy"],
+  modules: ["nuxt-icon", "@pinia/nuxt", "nuxt-headlessui"],
   css: ["~/assets/css/main.css"],
 
   runtimeConfig: {
     public: {
-      apiBase: "",
+      apiBase: process.env.NUXT_PUBLIC_API_BASE,
       apiSecret: process.env.NUXT_API_SECRET,
     },
   },
-
-  // proxy: {
-  //   enableProxy: true,
-  //   proxies: {
-  //     "/api": {
-  //       target: "http://sandbox.raynatours.com/api",
-  //       changeOrigin: true,
-  //       rewrite: (path: string) => {
-  //         return path.replace(/^\/api/, "");
-  //       },
-  //     },
-  //   },
-  //   fetch: true,
-  // },
 
   postcss: {
     plugins: {

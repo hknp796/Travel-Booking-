@@ -15,19 +15,13 @@
 </template>
 
 <script setup>
-// const config = useRuntimeConfig();
+/**
+ * On page load, we need to show one countries information
+ */
 
-// const {
-//   data: response,
-//   error,
-//   refresh,
-//   pending,
-// } = await useLazyFetch("http://sandbox.raynatours.com/api/Tour/countries", {
-//   headers: {
-//     Authorization: `Bearer ${config.apiSecret}`,
-//   },
-//   method: "get",
-// });
+const config = useRuntimeConfig();
 
-// console.log(response);
+const { fetchCountries } = useLoad();
+
+fetchCountries(config);
 </script>

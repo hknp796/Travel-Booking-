@@ -80,4 +80,6 @@ const categories = ref([
     icon: "material-symbols:home-work-outline",
   },
 ]);
+
+const { countries } = useLoad();
 </script>
