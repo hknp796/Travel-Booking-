@@ -15,6 +15,19 @@
         required
       />
     </div>
+    <select
+      id="countries"
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+    >
+      <option>Choose a country</option>
+      <option
+        v-for="country in countries"
+        :key="country.countryId"
+        :value="country.countryId"
+      >
+        {{ country.countryName }}
+      </option>
+    </select>
     <ButtonPrimary type="button" :is-loading="loading" @click="search"
       >Search</ButtonPrimary
     >
@@ -25,6 +38,8 @@
 const keyword = ref("");
 
 const loading = ref(false);
+
+const { countries } = useLoad();
 
 function search() {
   loading.value = true;
