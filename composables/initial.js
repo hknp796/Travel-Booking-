@@ -1,4 +1,5 @@
 import { defineStore } from "pinia";
+import { Result } from "postcss";
 
 export const useLoad = defineStore("load", () => {
   const countries = ref([]);
@@ -6,21 +7,36 @@ export const useLoad = defineStore("load", () => {
 
   async function fetchCountries(config) {
     try {
-      const { data } = await useLazyFetch(
-        `${config.apiBase}/api/Tour/countries`,
-        {
-          headers: {
-            Authorization: `Bearer ${config.apiSecret}`,
-          },
-          method: "get",
-        }
-      );
+      const { result } = await $fetch(`${config.apiBase}/api/Tour/countries`, {
+        headers: {
+          Authorization: `Bearer ${config.apiSecret}`,
+        },
+        method: "get",
+      });
 
-      countries.value = data.value.result;
+      countries.value = result;
     } catch (error) {
       console.log(error);
     }
   }
 
-  return { fetchCountries, countries };
+  async function fetchCities(config, countryId) {
+    try {
+      const { result } = await $fetch(`${config.apiBase}/api/Tour/cities`, {
+        headers: {
+          Authorization: `Bearer ${config.apiSecret}`,
+        },
+        method: "POST",
+        body: {
+          CountryId: countryId,
+        },
+      });
+
+      cities.value = result;
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  return { fetchCountries, fetchCities, countries };
 });

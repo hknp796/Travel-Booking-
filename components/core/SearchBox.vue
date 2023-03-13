@@ -15,8 +15,10 @@
         required
       />
     </div>
+
     <select
       id="countries"
+      v-model="selected"
       class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
     >
       <option>Choose a country</option>
@@ -35,13 +37,22 @@
 </template>
 
 <script setup>
+import { storeToRefs } from "pinia";
+const config = useRuntimeConfig();
 const keyword = ref("");
+const selected = ref("");
 
 const loading = ref(false);
 
-const { countries } = useLoad();
+const load = useLoad();
 
-function search() {
+const { fetchCities } = load;
+
+const { countries } = storeToRefs(load);
+
+async function search() {
   loading.value = true;
+  await fetchCities(config, selected.value);
+  loading.value = false;
 }
 </script>
