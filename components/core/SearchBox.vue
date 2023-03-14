@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full flex flex-col items-center justify-center gap-7">
+  <div class="w-full flex flex-col items-center justify-center gap-7 mt-4">
     <div class="flex gap-4">
       <div class="relative flex-1">
         <div
@@ -35,6 +35,16 @@
     <ButtonPrimary type="button" :is-loading="loading" @click="search"
       >Search</ButtonPrimary
     >
+    <div class="flex gap-2">
+      <div
+        class="p-2 rounded-xl border-2 border-cta text-cta cursor-pointer"
+        v-for="(place, index) in places"
+        :key="index"
+        @click="selectedCity(place)"
+      >
+        {{ place }}
+      </div>
+    </div>
   </div>
 </template>
 
@@ -46,6 +56,15 @@ const selected = ref("");
 
 const loading = ref(false);
 
+const places = [
+  "Ajman",
+  "Abu Dhabi",
+  "Dubai City",
+  "Fujairah",
+  "Ras al Khaimah",
+  "Sharjah",
+];
+
 const load = useLoad();
 
 const { fetchCities } = load;
@@ -56,5 +75,9 @@ async function search() {
   loading.value = true;
   await fetchCities(config, selected.value);
   loading.value = false;
+}
+
+function selectedCity(place) {
+  keyword.value = place;
 }
 </script>
