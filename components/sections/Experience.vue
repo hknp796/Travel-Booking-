@@ -44,14 +44,6 @@ onMounted(() => {
   fetchTourStaticData(config, { countryId: 13063, cityId: 13236 });
 });
 
-const test = {
-  title: "Title",
-  content: "Some information regarding the activity.",
-  rating: 4.5,
-  image: "/png/Flight.png",
-  alt: "",
-};
-
 const scrollSection = ref(null);
 function scrollingRight() {
   scrollSection.value.scrollBy({

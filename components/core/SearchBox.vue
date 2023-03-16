@@ -10,7 +10,7 @@
         <input
           type="search"
           id="default-search"
-          v-model="keyword"
+          v-model="selectedCityAndCountry.cityName"
           class="p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:outline-none flex-1 w-96"
           placeholder="Search"
           required
@@ -38,9 +38,9 @@
     <div class="flex gap-2">
       <div
         class="p-2 rounded-xl border-2 border-cta text-cta cursor-pointer"
-        v-for="(city, index) in staticCities"
+        v-for="(city, index) in cities"
         :key="index"
-        @click="selectedCity(city.cityName)"
+        @click="selectedCity(city)"
       >
         {{ city.cityName }}
       </div>
@@ -52,27 +52,39 @@
 import { storeToRefs } from "pinia";
 const config = useRuntimeConfig();
 
-const keyword = ref("");
 const selected = ref("");
 
 const loading = ref(false);
 
 // State
 const load = useLoad();
-const staticData = useStatic();
 
-const { staticCities, staticCountry } = staticData;
 const { fetchCities } = load;
 
-const { countries } = storeToRefs(load);
+const { countries, cities } = storeToRefs(load);
+
+const selectedCityAndCountry = ref({
+  countryId: null,
+  cityId: null,
+  cityName: "",
+});
+
+watch(
+  () => selected.value,
+  (value) => {
+    selectedCityAndCountry.value.countryId = value;
+    fetchCities(config, value);
+  }
+);
 
 async function search() {
   loading.value = true;
-  await fetchCities(config, selected.value);
+
   loading.value = false;
 }
 
 function selectedCity(place) {
-  keyword.value = place;
+  selectedCityAndCountry.value.cityId = place.cityId;
+  selectedCityAndCountry.value.cityName = place.cityName;
 }
 </script>
