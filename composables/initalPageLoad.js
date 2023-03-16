@@ -6,6 +6,11 @@ export const useStatic = defineStore("static", () => {
     countryName: "United Arab Emirates",
   });
 
+  const selectedCountryAndCity = ref({
+    countryId: 13063,
+    cityId: 13236,
+  });
+
   const staticCities = ref([
     {
       cityId: 13160,
@@ -45,5 +50,5 @@ export const useStatic = defineStore("static", () => {
     },
   ]);
 
-  return { staticCountry, staticCities };
+  return { staticCountry, staticCities, selectedCountryAndCity };
 });

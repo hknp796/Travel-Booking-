@@ -5,13 +5,16 @@
 <script setup>
 const route = useRoute();
 
+const config = useAppConfig();
+
 const popular = usePopular();
 
 const { fetchTourStaticDataById } = popular;
 
-
 onMounted(() => {
-  console.log("this is the tour id", route.params.id);
+  fetchTourStaticDataById(config, {
+    
+  });
 });
 
 definePageMeta({

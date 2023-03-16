@@ -38,16 +38,10 @@ const config = useRuntimeConfig();
 
 const { tourStaticData } = storeToRefs(popular);
 
-// initial values
-const initPopularExperience = ref({
-  countryId: 13063,
-  cityId: 13236,
-});
-
 const { fetchTourStaticData } = popular;
 
 onMounted(() => {
-  fetchTourStaticData(config, initPopularExperience.value);
+  fetchTourStaticData(config, { countryId: 13063, cityId: 13236 });
 });
 
 const test = {
