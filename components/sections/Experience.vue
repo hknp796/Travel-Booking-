@@ -24,6 +24,22 @@
 </template>
 
 <script setup>
+const popular = usePopular();
+
+const config = useRuntimeConfig();
+
+// initial values
+const initPopularExperience = ref({
+  countryId: 13063,
+  cityId: 13236,
+});
+
+const { fetchTourStaticData } = popular;
+
+onMounted(() => {
+  fetchTourStaticData(config, initPopularExperience.value);
+});
+
 const test = {
   title: "Title",
   content: "Some information regarding the activity.",

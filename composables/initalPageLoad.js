@@ -1,6 +1,6 @@
 import { defineStore } from "pinia";
 
-export const useStatic = defineStore("staticData", () => {
+export const useStatic = defineStore("static", () => {
   const staticCountry = ref({
     countryId: 13063,
     countryName: "United Arab Emirates",
