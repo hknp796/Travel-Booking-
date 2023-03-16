@@ -1,5 +1,5 @@
 <template>
-  <div class="min-w-[230px] flex flex-col">
+  <div class="min-w-[230px] flex flex-col" @click="redirect">
     <img
       :src="imageUrl"
       :alt="imageCaptionName"
@@ -21,6 +21,8 @@
 </template>
 
 <script setup>
+const router = useRouter();
+
 const props = defineProps({
   imagePath: String, // image path
   imageCaptionName: String, // image alt
@@ -28,6 +30,7 @@ const props = defineProps({
   cityTourType: String,
   // tourShortDescription: String,
   tourName: String,
+  tourId: Number,
 
   cityName: String,
   countryName: String,
@@ -41,6 +44,10 @@ const props = defineProps({
 const imageUrl = computed(() => {
   return `https://d2g4iwshf24scx.cloudfront.net${props.imagePath}`;
 });
+
+function redirect() {
+  router.push(`/tours/${props.tourId}`);
+}
 </script>
 
 <style lang="scss" scoped></style>

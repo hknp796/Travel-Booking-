@@ -1,7 +1,5 @@
 <template>
-  <main
-    class="w-full mobile-container min-h-screen flex flex-col justify-between"
-  >
+  <main class="w-full min-h-screen flex flex-col justify-between">
     <slot></slot>
   </main>
 </template>
