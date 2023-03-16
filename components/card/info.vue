@@ -5,7 +5,10 @@
       :alt="imageCaptionName"
       class="rounded-lg mb-3 w-full h-[90%] object-cover cursor-pointer"
     />
-    {{ cityName }} {{ countryName }}
+    <div class="flex items-center gap-3">
+      <span class="font-medium text-[24px]">{{ cityName }}</span> --
+      <span class="font-medium text-[24px]">{{ countryName }}</span>
+    </div>
 
     <div class="w-full mt-auto flex items-center justify-between">
       <h3 class="font-bold text-[18px]">{{ tourName }}</h3>
