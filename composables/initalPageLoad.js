@@ -10,32 +10,32 @@ export const useStatic = defineStore("staticData", () => {
     {
       cityId: 13160,
       cityName: "Ajman",
-      image: "",
+      image: "/cities/Ajman.png",
     },
     {
       cityId: 13236,
       cityName: "Abu Dhabi",
-      image: "",
+      image: "/cities/Abu-dhabi.jpeg",
     },
     {
       cityId: 13668,
       cityName: "Dubai City",
-      image: "",
+      image: "/cities/Dubai.jpeg",
     },
     {
       cityId: 13765,
       cityName: "Fujairah",
-      image: "",
+      image: "/cities/Fujairah.jpeg",
     },
     {
       cityId: 14644,
       cityName: "Ras al Khaimah",
-      image: "",
+      image: "/cities/Ras-al-khaimah.jpeg",
     },
     {
       cityId: 14777,
       cityName: "Sharjah",
-      image: "",
+      image: "/cities/Sharja.jpeg",
     },
   ]);
 

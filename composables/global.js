@@ -4,7 +4,7 @@ export const useGlobal = defineStore("global", () => {
   /**
    * Page loading
    */
-  const pageLoading = ref(true);
+  const pageLoading = ref(false);
 
   function setPageLoading(isLoading) {
     pageLoading.value = isLoading;
