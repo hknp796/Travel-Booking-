@@ -5,6 +5,8 @@
       class="flex overflow-x-scroll mt-4 gap-5 lg:w-full"
       ref="scrollSection"
     >
+      <CardOutlinedIcon v-for="index in 6" :key="index" />
+
       <button
         type="button"
         class="text-black bg-white border hover:bg-gray-200 font-medium rounded-full text-sm p-2.5 text-center items-center absolute -right-3 top-[200px] hidden lg:block"
