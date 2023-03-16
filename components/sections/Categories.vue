@@ -11,7 +11,7 @@
         v-for="(item, index) in 6"
         :key="index"
       />
-      <CardInfo v-bind="test2" class="lg:min-w-[430px] lg:min-h-[325px]" />
+
       <button
         type="button"
         class="text-black bg-white border hover:bg-gray-200 font-medium rounded-full text-sm p-2.5 text-center items-center absolute -right-3 top-[200px] hidden lg:block"
@@ -26,8 +26,7 @@
 <script setup>
 const test = {
   title: "Title",
-  content:
-    "jahgdsjajhsgdhgajshdgajhsgdhjagsdjhgajhsdgjhasgdjhasgdhjagsdjhagsjhdgajhsgdjhasgdjhagsdjhgasjhdgajshgdjasdgj",
+  content: "Some information regarding the activity.",
   rating: 4.5,
   image: "/png/Flight.png",
   alt: "",
@@ -35,7 +34,7 @@ const test = {
 
 const test2 = {
   title: "Title",
-  content: "jahgdsjajhsgdhgajsj",
+  content: "Some information regarding the activity.",
   rating: 4.5,
   image: "/png/Flight.png",
   alt: "",

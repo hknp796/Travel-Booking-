@@ -1,10 +1,8 @@
 <template>
-  <div class="lg:per-65-container">
+  <div class="lg:per-65-container flex flex-col gap-10">
     <CoreTabs class="lg:hidden" />
 
     <SectionsDestinations class="mt-52" />
-
-    <ButtonNextButton />
 
     <SectionsExperience />
 
