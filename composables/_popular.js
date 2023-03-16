@@ -6,6 +6,8 @@ const global = useGlobal();
 export const usePopular = defineStore("popular", () => {
   const tourStaticData = ref([]);
 
+  const tourStaticDataById = ref([]);
+
   const topCategories = ref([
     { id: 0, title: "Tours", image: "/svg/ticket.svg", alt: "Tour icon" },
     { id: 1, title: "Tickets", image: "/svg/ticket.svg", alt: "Tickets icon" },
@@ -88,5 +90,34 @@ export const usePopular = defineStore("popular", () => {
     }
   }
 
-  return { fetchTourStaticData, tourStaticData, topCategories };
+  async function fetchTourStaticDataById(config, info) {
+    global.setPageLoading(true);
+    try {
+      const { result } = await $fetch(
+        `${config.apiBase}/api/Tour/tourStaticDataById`,
+        {
+          headers: {
+            Authorization: `Bearer ${config.apiSecret}`,
+          },
+          method: "POST",
+          body: info,
+        }
+      );
+
+      tourStaticDataById.value = result;
+
+      global.setPageLoading(false);
+    } catch (error) {
+      console.log(error);
+
+      global.setPageLoading(false);
+    }
+  }
+
+  return {
+    fetchTourStaticData,
+    fetchTourStaticDataById,
+    tourStaticData,
+    topCategories,
+  };
 });

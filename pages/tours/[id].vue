@@ -5,6 +5,11 @@
 <script setup>
 const route = useRoute();
 
+const popular = usePopular();
+
+const { fetchTourStaticDataById } = popular;
+
+
 onMounted(() => {
   console.log("this is the tour id", route.params.id);
 });
