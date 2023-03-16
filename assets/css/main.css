@@ -16,7 +16,7 @@
   .per-90-container {
     @apply w-[90%] mx-auto;
   }
-  
+
   .per-65-container {
     @apply w-[75%] mx-auto;
   }
@@ -24,5 +24,11 @@
   /* mobile container */
   .mobile-container {
     @apply max-w-lg mx-auto;
+  }
+
+  /* Blur */
+
+  .custom-blur {
+    @apply blur-[2px];
   }
 }
