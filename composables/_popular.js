@@ -7,27 +7,57 @@ export const usePopular = defineStore("popular", () => {
   const tourStaticData = ref([]);
 
   const topCategories = ref([
-    { id: 0, title: "Tours", image: "", alt: "Tour icon" },
-    { id: 1, title: "Tickets", image: "", alt: "Tickets icon" },
+    { id: 0, title: "Tours", image: "/svg/ticket.svg", alt: "Tour icon" },
+    { id: 1, title: "Tickets", image: "/svg/ticket.svg", alt: "Tickets icon" },
     {
       id: 2,
       title: "Ariel Sightseeing",
-      image: "",
+      image: "/svg/ticket.svg",
       alt: "Ariel sightseeing icon",
     },
-    { id: 3, title: "Cruises", image: "", alt: "cruises icon" },
-    { id: 4, title: "Connectivity", image: "", alt: "connectivity icon" },
-    { id: 5, title: "Adventure", image: "", alt: "adventure icon" },
-    { id: 6, title: "Water Activities", image: "", alt: "water activity icon" },
+    { id: 3, title: "Cruises", image: "/svg/ticket.svg", alt: "cruises icon" },
+    {
+      id: 4,
+      title: "Connectivity",
+      image: "/svg/ticket.svg",
+      alt: "connectivity icon",
+    },
+    {
+      id: 5,
+      title: "Adventure",
+      image: "/svg/ticket.svg",
+      alt: "adventure icon",
+    },
+    {
+      id: 6,
+      title: "Water Activities",
+      image: "/svg/ticket.svg",
+      alt: "water activity icon",
+    },
     {
       id: 7,
       title: "Nature & Wildlife",
-      image: "",
+      image: "/svg/ticket.svg",
       alt: "nature & wildlife icon",
     },
-    { id: 8, title: "Wellness", image: "", alt: "wellness icon" },
-    { id: 9, title: "Food & Drinks", image: "", alt: "food and drinks icon" },
-    { id: 10, title: "Transportation", image: "", alt: "transportation icon" },
+    {
+      id: 8,
+      title: "Wellness",
+      image: "/svg/ticket.svg",
+      alt: "wellness icon",
+    },
+    {
+      id: 9,
+      title: "Food & Drinks",
+      image: "/svg/ticket.svg",
+      alt: "food and drinks icon",
+    },
+    {
+      id: 10,
+      title: "Transportation",
+      image: "/svg/ticket.svg",
+      alt: "transportation icon",
+    },
   ]);
 
   async function fetchTourStaticData(config, info) {
