@@ -4,6 +4,8 @@
 
     <SectionsDestinations class="mt-52" />
 
+    <SectionsGroup class="my-5" />
+
     <SectionsExperience />
 
     <!-- Add categories -->
