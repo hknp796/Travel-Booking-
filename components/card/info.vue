@@ -1,29 +1,42 @@
 <template>
   <div class="min-w-[230px] flex flex-col">
     <img
-      :src="image"
-      :alt="alt"
-      class="rounded-lg mb-3 w-full cursor-pointer"
+      :src="imageUrl"
+      :alt="imageCaptionName"
+      class="rounded-lg mb-3 w-full h-[90%] object-cover cursor-pointer"
     />
-
-    <p class="text-gray-300 text-[12px] break-words">
-      {{ content }}
-    </p>
+    {{ cityName }} {{ countryName }}
 
     <div class="w-full mt-auto flex items-center justify-between">
-      <h3 class="font-bold text-[15px]">{{ title }}</h3>
-      <BaseBadge which="yellow" :rating="rating" />
+      <h3 class="font-bold text-[18px]">{{ tourName }}</h3>
+      <div class="flex items-center gap-2">
+        <span class="text-[14px]">({{ reviewCount }})</span>
+        <BaseBadge which="yellow" :rating="rating" />
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 const props = defineProps({
-  title: String,
+  imagePath: String, // image path
+  imageCaptionName: String, // image alt
+
+  cityTourType: String,
+  // tourShortDescription: String,
+  tourName: String,
+
+  cityName: String,
+  countryName: String,
+
+  reviewCount: Number,
+
   content: String,
   rating: Number,
-  image: String,
-  alt: String,
+});
+
+const imageUrl = computed(() => {
+  return `https://d2g4iwshf24scx.cloudfront.net${props.imagePath}`;
 });
 </script>
 

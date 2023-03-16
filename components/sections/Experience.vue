@@ -6,9 +6,9 @@
       ref="scrollSection"
     >
       <CardInfo
-        v-bind="test"
         class="lg:min-w-[430px] lg:min-h-[325px]"
         v-for="popular in tourStaticData"
+        v-bind="popular"
         :key="index"
       />
 
