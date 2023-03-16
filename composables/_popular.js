@@ -4,8 +4,8 @@ import { useGlobal } from "./global";
 const global = useGlobal();
 
 export const usePopular = defineStore("popular", () => {
+  const tourStaticData = ref([]);
   async function fetchTourStaticData(config, info) {
-    const tourStaticData = ref([]);
     /**
      * Expects: countryId and cityId
      */
@@ -33,5 +33,5 @@ export const usePopular = defineStore("popular", () => {
     }
   }
 
-  return { fetchTourStaticData };
+  return { fetchTourStaticData, tourStaticData };
 });

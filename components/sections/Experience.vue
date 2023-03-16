@@ -8,7 +8,7 @@
       <CardInfo
         v-bind="test"
         class="lg:min-w-[430px] lg:min-h-[325px]"
-        v-for="(item, index) in 6"
+        v-for="popular in tourStaticData"
         :key="index"
       />
 
@@ -24,9 +24,12 @@
 </template>
 
 <script setup>
+import { storeToRefs } from "pinia";
 const popular = usePopular();
 
 const config = useRuntimeConfig();
+
+const { tourStaticData } = storeToRefs(popular);
 
 // initial values
 const initPopularExperience = ref({
@@ -43,14 +46,6 @@ onMounted(() => {
 const test = {
   title: "Title",
   content: "Some information regarding the activity.",
-  rating: 4.5,
-  image: "/png/Flight.png",
-  alt: "",
-};
-
-const test2 = {
-  title: "Title",
-  content: "jahgdsjajhsgdhgajsj",
   rating: 4.5,
   image: "/png/Flight.png",
   alt: "",
