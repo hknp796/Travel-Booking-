@@ -14,10 +14,17 @@
 
       <button
         type="button"
-        class="text-black bg-white border hover:bg-gray-200 font-medium rounded-full text-sm p-2.5 text-center items-center absolute -right-3 top-[200px] hidden lg:block"
-        @click="scrolling"
+        class="text-black bg-white border hover:bg-gray-200 font-medium rounded-full text-sm p-2.5 text-center items-center absolute -right-3 top-[45%] hidden lg:block"
+        @click="scrollingRight"
       >
         <Icon name="mdi-light:arrow-right" width="30" height="30" />
+      </button>
+      <button
+        type="button"
+        class="text-black bg-white border hover:bg-gray-200 font-medium rounded-full text-sm p-2.5 text-center items-center absolute -left-3 top-[45%] hidden lg:block"
+        @click="scrollingLeft"
+      >
+        <Icon name="mdi-light:arrow-left" width="30" height="30" />
       </button>
     </div>
   </div>
@@ -52,9 +59,15 @@ const test = {
 };
 
 const scrollSection = ref(null);
-function scrolling() {
+function scrollingRight() {
   scrollSection.value.scrollBy({
     left: 900,
+    behavior: "smooth",
+  });
+}
+function scrollingLeft() {
+  scrollSection.value.scrollBy({
+    left: -900,
     behavior: "smooth",
   });
 }
