@@ -1,5 +1,4 @@
 import { defineStore } from "pinia";
-import { Result } from "postcss";
 
 export const useLoad = defineStore("load", () => {
   const countries = ref([]);
