@@ -72,6 +72,12 @@ const selectedCityAndCountry = ref({
 watch(
   () => selected.value,
   (value) => {
+    selectedCityAndCountry.value = {
+      countryId: null,
+      cityId: null,
+      cityName: "",
+    };
+
     selectedCityAndCountry.value.countryId = value;
     fetchCities(config, value);
   }
