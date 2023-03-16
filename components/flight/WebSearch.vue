@@ -140,14 +140,14 @@
         </div>
       </div>
       <div
-        class="border-r border-gray-300 flex-1 p-4 hover:bg-[#70C3D4] transition ease-in-out duration-300"
+        class="border-r border-gray-300 flex-1 p-4 hover:bg-[#70C3D4] transition ease-in-out duration-300 whitespace-nowrap"
       >
         <p class="">Deaparture</p>
         <p class=""><span class="text-3xl font-bold mr-2">24</span>March 23</p>
         <p>Friday</p>
       </div>
       <div
-        class="flex-1 p-4 border-r border-gray-300 hover:bg-[#70C3D4] transition ease-in-out duration-300"
+        class="flex-1 p-4 border-r border-gray-300 hover:bg-[#70C3D4] transition ease-in-out duration-300 whitespace-nowrap"
       >
         <p class="">Return</p>
         <p class=""><span class="text-3xl font-bold mr-2">24</span>March 23</p>
@@ -156,7 +156,7 @@
       <div
         class="flex-1 p-4 border-gray-300 hover:bg-[#70C3D4] rounded-r-xl transition ease-in-out duration-300"
       >
-        <p>Travelleres and class</p>
+        <p>Travelleres & class</p>
         <p><span class="font-bold text-3xl mr-2">1</span>Traveller</p>
         <p>Economy,Premium</p>
       </div>
