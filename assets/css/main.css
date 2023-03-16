@@ -16,6 +16,10 @@
   .per-90-container {
     @apply w-[90%] mx-auto;
   }
+  
+  .per-65-container {
+    @apply w-[75%] mx-auto;
+  }
 
   /* mobile container */
   .mobile-container {

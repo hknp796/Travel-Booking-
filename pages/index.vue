@@ -1,5 +1,5 @@
 <template>
-  <div class=" ">
+  <div class="lg:per-65-container">
     <CoreTabs class="lg:hidden" />
 
     <SectionsDestinations class="mt-40" />
