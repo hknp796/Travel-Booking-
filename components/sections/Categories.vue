@@ -5,7 +5,11 @@
       class="flex overflow-x-scroll mt-4 gap-5 lg:w-full"
       ref="scrollSection"
     >
-      <CardOutlinedIcon v-for="index in 16" :key="index" v-bind="dummy" />
+      <CardOutlinedIcon
+        v-for="category in topCategories"
+        :key="category.id"
+        v-bind="category"
+      />
 
       <button
         type="button"
@@ -26,7 +30,11 @@
 </template>
 
 <script setup>
+const popular = usePopular();
+const { topCategories } = popular;
+
 const scrollSection = ref(null);
+
 function scrollingRight() {
   scrollSection.value.scrollBy({
     left: 900,
@@ -39,10 +47,4 @@ function scrollingLeft() {
     behavior: "smooth",
   });
 }
-
-const dummy = {
-  image: "/svg/ticket.svg",
-  alt: "",
-  title: "Tickets",
-};
 </script>
