@@ -2,12 +2,6 @@
   <div class="p-4">
     <BaseRedirectTitle title="Top Destination" to="/top-destination" />
 
-    <!-- <div class="grid grid-cols-2 gap-2 rounded-xl mt-4">
-      <div class="col-span-2"><CardImage v-bind="dummy" /></div>
-      <div><CardImage v-bind="dummy" /></div>
-      <div><CardImage v-bind="dummy" /></div>
-    </div> -->
-
     <div
       class="grid grid-cols-2 gap-2 rounded-xl mt-4 md:grid-cols-2 md:grid-rows-3 md:gap-4"
     >
@@ -39,4 +33,11 @@ const dummy = {
   title: "Dubai",
   subtitle: "United Arab Emirates",
 };
+
+/**
+ * Import static details
+ */
+const staticData = useStatic();
+
+const { staticCities } = staticData;
 </script>

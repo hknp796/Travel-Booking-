@@ -1,21 +1,26 @@
 <template>
   <!-- mobile container needs to be removed -->
-  <main
-    class="flex flex-col justify-between relative"
-    :class="`${pageLoading ? 'custom-blur' : ''}`"
-  >
+  <main class="relative">
     <div
       v-if="pageLoading"
       id="loader"
-      class="w-full h-[100%] custom-blur bg-red-100/30 absolute z-20"
+      class="w-full h-screen bg-red-100/30 absolute z-20 flex items-center justify-center"
     >
-  
-  </div>
+      <img
+        src="/svg/BalloonLoader.svg"
+        al="3 ballons"
+        class="w-[150px] h-[150px]"
+      />
+    </div>
+    <div
+      class="flex flex-col justify-between relative"
+      :class="`${pageLoading ? 'custom-blur' : ''}`"
+    >
+      <CoreNavbar />
+      <slot />
 
-    <CoreNavbar />
-    <slot />
-
-    <CoreFooter class="" />
+      <CoreFooter class="" />
+    </div>
   </main>
 </template>
 

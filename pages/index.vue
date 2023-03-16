@@ -2,7 +2,7 @@
   <div class="lg:per-65-container">
     <CoreTabs class="lg:hidden" />
 
-    <SectionsDestinations class="mt-40" />
+    <SectionsDestinations class="mt-52" />
 
     <ButtonNextButton />
 
