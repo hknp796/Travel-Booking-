@@ -38,11 +38,11 @@
     <div class="flex gap-2">
       <div
         class="p-2 rounded-xl border-2 border-cta text-cta cursor-pointer"
-        v-for="(place, index) in places"
+        v-for="(city, index) in staticCities"
         :key="index"
-        @click="selectedCity(place)"
+        @click="selectedCity(city.cityName)"
       >
-        {{ place }}
+        {{ city.cityName }}
       </div>
     </div>
   </div>
@@ -51,22 +51,17 @@
 <script setup>
 import { storeToRefs } from "pinia";
 const config = useRuntimeConfig();
+
 const keyword = ref("");
 const selected = ref("");
 
 const loading = ref(false);
 
-const places = [
-  "Ajman",
-  "Abu Dhabi",
-  "Dubai City",
-  "Fujairah",
-  "Ras al Khaimah",
-  "Sharjah",
-];
-
+// State
 const load = useLoad();
+const staticData = useStatic();
 
+const { staticCities, staticCountry } = staticData;
 const { fetchCities } = load;
 
 const { countries } = storeToRefs(load);
