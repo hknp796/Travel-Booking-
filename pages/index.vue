@@ -8,6 +8,9 @@
 
     <SectionsExperience />
 
+    <!-- Add categories -->
+    <!--  -->
+
     <SectionsCategories />
 
     <StaticWhy />

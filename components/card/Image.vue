@@ -1,12 +1,13 @@
 <template>
-  <div class="relative cursor-pointer">
-    <img :src="image" :alt="alt" class="rounded-lg" />
-    <div
-      class="absolute inset-0 bg-gradient-to-r to-transparent from-gray-900 rounded-lg"
-    ></div>
+  <div class="relative cursor-pointer w-full h-full">
+    <img
+      :src="image"
+      :alt="cityName"
+      class="rounded-lg w-full h-full bg-cover"
+    />
 
     <div class="absolute inset-0 text-white flex flex-col justify-end p-4">
-      <h1 class="text-xl font-bold">{{ title }}</h1>
+      <h1 class="text-xl font-bold">{{ cityName }}</h1>
       <p class="text-sm">{{ subtitle }}</p>
     </div>
   </div>
@@ -15,8 +16,7 @@
 <script setup>
 const props = defineProps({
   image: "",
-  alt: "",
-  title: "",
+  cityName: "",
   subtitle: "",
 });
 </script>
