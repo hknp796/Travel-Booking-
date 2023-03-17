@@ -29,6 +29,6 @@
   /* Blur */
 
   .custom-blur {
-    @apply blur-[2px];
+    @apply blur-[2px] fixed top-0 left-0  w-[100%] !important;
   }
 }
