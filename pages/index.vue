@@ -7,6 +7,7 @@
     <SectionsGroup class="my-5" />
 
     <SectionsExperience />
+
     <SectionsCategories />
 
     <StaticWhy />

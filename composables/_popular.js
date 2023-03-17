@@ -9,55 +9,55 @@ export const usePopular = defineStore("popular", () => {
   const tourStaticDataById = ref([]);
 
   const topCategories = ref([
-    { id: 0, title: "Tours", image: "/svg/ticket.svg", alt: "Tour icon" },
+    { id: 0, title: "Tours", image: "/svg/tours.svg", alt: "Tour icon" },
     { id: 1, title: "Tickets", image: "/svg/ticket.svg", alt: "Tickets icon" },
     {
       id: 2,
       title: "Ariel Sightseeing",
-      image: "/svg/ticket.svg",
+      image: "/svg/flights.svg",
       alt: "Ariel sightseeing icon",
     },
-    { id: 3, title: "Cruises", image: "/svg/ticket.svg", alt: "cruises icon" },
+    { id: 3, title: "Cruises", image: "/svg/cruises.svg", alt: "cruises icon" },
     {
       id: 4,
       title: "Connectivity",
-      image: "/svg/ticket.svg",
+      image: "/svg/connectivity.svg",
       alt: "connectivity icon",
     },
     {
       id: 5,
       title: "Adventure",
-      image: "/svg/ticket.svg",
+      image: "/svg/adventure.svg",
       alt: "adventure icon",
     },
     {
       id: 6,
       title: "Water Activities",
-      image: "/svg/ticket.svg",
+      image: "/svg/water.svg",
       alt: "water activity icon",
     },
     {
       id: 7,
       title: "Nature & Wildlife",
-      image: "/svg/ticket.svg",
+      image: "/svg/nature.svg",
       alt: "nature & wildlife icon",
     },
     {
       id: 8,
       title: "Wellness",
-      image: "/svg/ticket.svg",
+      image: "/svg/health.svg",
       alt: "wellness icon",
     },
     {
       id: 9,
       title: "Food & Drinks",
-      image: "/svg/ticket.svg",
+      image: "/svg/food.svg",
       alt: "food and drinks icon",
     },
     {
       id: 10,
       title: "Transportation",
-      image: "/svg/ticket.svg",
+      image: "/svg/transportation.svg",
       alt: "transportation icon",
     },
   ]);
