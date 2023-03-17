@@ -70,16 +70,13 @@ export const usePopular = defineStore("popular", () => {
     global.setPageLoading(true);
 
     try {
-      const { result } = await $fetch(
-        `${config.apiBase}/api/Tour/tourstaticdata`,
-        {
-          headers: {
-            Authorization: `Bearer ${config.apiSecret}`,
-          },
-          method: "POST",
-          body: info,
-        }
-      );
+      const { result } = await $fetch("/api/Tour/tourstaticdata", {
+        headers: {
+          Authorization: `Bearer ${config.apiSecret}`,
+        },
+        method: "POST",
+        body: info,
+      });
 
       tourStaticData.value = result;
 
@@ -93,16 +90,13 @@ export const usePopular = defineStore("popular", () => {
   async function fetchTourStaticDataById(config, info) {
     global.setPageLoading(true);
     try {
-      const { result } = await $fetch(
-        `${config.apiBase}/api/Tour/tourStaticDataById`,
-        {
-          headers: {
-            Authorization: `Bearer ${config.apiSecret}`,
-          },
-          method: "POST",
-          body: info,
-        }
-      );
+      const { result } = await $fetch("/api/Tour/tourStaticDataById", {
+        headers: {
+          Authorization: `Bearer ${config.apiSecret}`,
+        },
+        method: "POST",
+        body: info,
+      });
 
       tourStaticDataById.value = result;
 

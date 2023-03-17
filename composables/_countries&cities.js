@@ -13,7 +13,7 @@ export const useLoad = defineStore("load", () => {
   async function fetchCountries(config) {
     global.setPageLoading(true);
     try {
-      const { result } = await $fetch(`${config.apiBase}/api/Tour/countries`, {
+      const { result } = await $fetch("/api/Tour/countries", {
         headers: {
           Authorization: `Bearer ${config.apiSecret}`,
         },
@@ -31,7 +31,7 @@ export const useLoad = defineStore("load", () => {
   async function fetchCities(config, countryId) {
     global.setPageLoading(true);
     try {
-      const { result } = await $fetch(`${config.apiBase}/api/Tour/cities`, {
+      const { result } = await $fetch("/api/Tour/cities", {
         headers: {
           Authorization: `Bearer ${config.apiSecret}`,
         },
